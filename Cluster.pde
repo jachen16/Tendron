@@ -4,6 +4,13 @@ public class Cluster
 
     public Cluster(int len, int x, int y)
     {
-        // your code here
+      double angle = Math.random()*TWO_PI;
+      Tendril bob;
+      for (int i = 0; i < 7; i++)
+      {
+        bob = new Tendril(len, angle, x, y);
+        bob.show();
+        angle = angle + (TWO_PI/7);
+      }
     }
 }
